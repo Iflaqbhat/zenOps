@@ -2,7 +2,16 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import DemoModal from "@/components/demo/DemoModal";
-import { Sparkles, Zap, Shield, Users, ArrowRight, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Sparkles,
+  Zap,
+  Shield,
+  Users,
+  ArrowRight,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,19 +20,22 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: "ZenOps AI reduced our patient intake time by 45 minutes. Our staff can now focus on critical care.",
+      quote:
+        "ZenOps AI reduced our patient intake time by 45 minutes. Our staff can now focus on critical care.",
       author: "Dr. Lisa Martinez",
       title: "Chief Medical Officer",
       organization: "Memorial Regional Hospital",
     },
     {
-      quote: "The AI Receptionist handles 500+ calls daily with zero wait time. Patient satisfaction increased by 35%.",
+      quote:
+        "The AI Receptionist handles 500+ calls daily with zero wait time. Patient satisfaction increased by 35%.",
       author: "James Chen, MBA",
       title: "Director of Operations",
       organization: "Summit Medical Group",
     },
     {
-      quote: "AI Scribe gave us 3 hours back every day per physician. Documentation is faster and more accurate.",
+      quote:
+        "AI Scribe gave us 3 hours back every day per physician. Documentation is faster and more accurate.",
       author: "Dr. Robert Kim",
       title: "Lead Surgeon",
       organization: "Riverside Orthopedic Clinic",
@@ -33,22 +45,26 @@ export default function Home() {
   const detailedFeatures = [
     {
       title: "Seamless EHR Integration",
-      description: "Connect with Epic, Cerner, Athenahealth, and 150+ other EHR systems in minutes",
+      description:
+        "Connect with Epic, Cerner, Athenahealth, and 150+ other EHR systems in minutes",
       icon: "🔗",
     },
     {
       title: "24/7 AI Availability",
-      description: "Your AI agents work around the clock, never taking breaks or calling in sick",
+      description:
+        "Your AI agents work around the clock, never taking breaks or calling in sick",
       icon: "⏰",
     },
     {
       title: "HIPAA Compliant",
-      description: "Enterprise-grade security with SOC 2 certification and end-to-end encryption",
+      description:
+        "Enterprise-grade security with SOC 2 certification and end-to-end encryption",
       icon: "🔒",
     },
     {
       title: "Real-time Analytics",
-      description: "Track performance metrics and ROI with comprehensive dashboards",
+      description:
+        "Track performance metrics and ROI with comprehensive dashboards",
       icon: "📊",
     },
   ];
@@ -73,7 +89,9 @@ export default function Home() {
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const nextFeature = () => {
@@ -81,7 +99,9 @@ export default function Home() {
   };
 
   const prevFeature = () => {
-    setCurrentFeature((prev) => (prev - 1 + detailedFeatures.length) % detailedFeatures.length);
+    setCurrentFeature(
+      (prev) => (prev - 1 + detailedFeatures.length) % detailedFeatures.length
+    );
   };
 
   const stats = [
@@ -147,7 +167,8 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Automate administrative tasks, reduce staff workload, and improve patient care with HIPAA-compliant AI agents
+              Automate administrative tasks, reduce staff workload, and improve
+              patient care with HIPAA-compliant AI agents
             </p>
 
             <div className="flex gap-4 justify-center flex-wrap mb-16">
@@ -195,7 +216,9 @@ export default function Home() {
                 <div className="text-4xl lg:text-5xl font-bold mb-2 text-yellow">
                   {stat.value}
                 </div>
-                <div className="text-neutral-400 text-sm font-medium">{stat.label}</div>
+                <div className="text-neutral-400 text-sm font-medium">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -210,7 +233,8 @@ export default function Home() {
               Four AI Agents for Healthcare
             </h2>
             <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-              Specialized agents designed to automate different aspects of your practice
+              Specialized agents designed to automate different aspects of your
+              practice
             </p>
           </div>
 
@@ -224,13 +248,13 @@ export default function Home() {
                   .replace("ai-", "")}`}
               >
                 <div className="h-full p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-secure-teal/30 transition-all duration-200 cursor-pointer group">
-                  <div className="text-4xl mb-4">
-                    {agent.icon}
-                  </div>
+                  <div className="text-4xl mb-4">{agent.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">
                     {agent.name}
                   </h3>
-                  <p className="text-neutral-400 text-sm mb-4">{agent.description}</p>
+                  <p className="text-neutral-400 text-sm mb-4">
+                    {agent.description}
+                  </p>
                   <div className="flex items-center gap-2 text-sm font-medium text-secure-teal group-hover:text-yellow transition-colors">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </div>
@@ -257,7 +281,9 @@ export default function Home() {
             <div className="overflow-hidden rounded-3xl bg-neutral-900 border border-neutral-800 p-8 md:p-12">
               <div className="flex items-center justify-center min-h-[250px]">
                 <div className="text-center max-w-2xl mx-auto">
-                  <div className="text-6xl mb-6">{detailedFeatures[currentFeature].icon}</div>
+                  <div className="text-6xl mb-6">
+                    {detailedFeatures[currentFeature].icon}
+                  </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {detailedFeatures[currentFeature].title}
                   </h3>
@@ -276,7 +302,7 @@ export default function Home() {
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                
+
                 {/* Dots */}
                 <div className="flex gap-2">
                   {detailedFeatures.map((_, idx) => (
@@ -284,7 +310,9 @@ export default function Home() {
                       key={idx}
                       onClick={() => setCurrentFeature(idx)}
                       className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentFeature ? "bg-yellow w-8" : "bg-neutral-700"
+                        idx === currentFeature
+                          ? "bg-yellow w-8"
+                          : "bg-neutral-700"
                       }`}
                       aria-label={`Go to feature ${idx + 1}`}
                     />
@@ -347,7 +375,7 @@ export default function Home() {
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                
+
                 {/* Dots */}
                 <div className="flex gap-2">
                   {testimonials.map((_, idx) => (
@@ -355,7 +383,9 @@ export default function Home() {
                       key={idx}
                       onClick={() => setCurrentTestimonial(idx)}
                       className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentTestimonial ? "bg-yellow w-8" : "bg-neutral-700"
+                        idx === currentTestimonial
+                          ? "bg-yellow w-8"
+                          : "bg-neutral-700"
                       }`}
                       aria-label={`Go to testimonial ${idx + 1}`}
                     />
@@ -429,8 +459,7 @@ export default function Home() {
               </p>
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-center gap-2 text-neutral-300">
-                  <Check className="w-4 h-4 text-secure-teal" />
-                  1 AI Agent
+                  <Check className="w-4 h-4 text-secure-teal" />1 AI Agent
                 </li>
                 <li className="flex items-center gap-2 text-neutral-300">
                   <Check className="w-4 h-4 text-secure-teal" />
@@ -454,7 +483,9 @@ export default function Home() {
                 <span className="text-4xl font-bold text-yellow">$1,499</span>
                 <span className="text-neutral-400 text-sm">/month</span>
               </div>
-              <p className="text-neutral-400 text-sm mb-6">For growing practices</p>
+              <p className="text-neutral-400 text-sm mb-6">
+                For growing practices
+              </p>
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-center gap-2 text-neutral-300">
                   <Check className="w-4 h-4 text-secure-teal" />
@@ -476,7 +507,9 @@ export default function Home() {
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-4xl font-bold text-yellow">Custom</span>
               </div>
-              <p className="text-neutral-400 text-sm mb-6">For large organizations</p>
+              <p className="text-neutral-400 text-sm mb-6">
+                For large organizations
+              </p>
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-center gap-2 text-neutral-300">
                   <Check className="w-4 h-4 text-secure-teal" />

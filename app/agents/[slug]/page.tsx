@@ -416,12 +416,3 @@ const agentData = {
     ],
   },
 };
-
-export async function generateStaticParams() {
-  return [
-    { slug: "nurse" },
-    { slug: "receptionist" },
-    { slug: "scribe" },
-    { slug: "coder" },
-  ];
-}
