@@ -8,7 +8,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-neutral-800/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/95 backdrop-blur-lg border-b border-neutral-800/30">
       <div className="container mx-auto px-6 relative">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
